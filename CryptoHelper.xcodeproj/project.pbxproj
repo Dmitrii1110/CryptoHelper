@@ -16,6 +16,8 @@
 		B2E0084027A52C4A00FD35BB /* CryptoHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0083F27A52C4A00FD35BB /* CryptoHelperTests.swift */; };
 		B2E0084A27A52C4A00FD35BB /* CryptoHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0084927A52C4A00FD35BB /* CryptoHelperUITests.swift */; };
 		B2E0084C27A52C4A00FD35BB /* CryptoHelperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0084B27A52C4A00FD35BB /* CryptoHelperUITestsLaunchTests.swift */; };
+		B2E0085927A52D6D00FD35BB /* NomicsAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0085827A52D6D00FD35BB /* NomicsAPICaller.swift */; };
+		B2E0085B27A53CBD00FD35BB /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0085A27A53CBD00FD35BB /* CryptoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B2E0084527A52C4A00FD35BB /* CryptoHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E0084927A52C4A00FD35BB /* CryptoHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelperUITests.swift; sourceTree = "<group>"; };
 		B2E0084B27A52C4A00FD35BB /* CryptoHelperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B2E0085827A52D6D00FD35BB /* NomicsAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomicsAPICaller.swift; sourceTree = "<group>"; };
+		B2E0085A27A53CBD00FD35BB /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				B2E0083127A52C4900FD35BB /* Assets.xcassets */,
 				B2E0083327A52C4900FD35BB /* LaunchScreen.storyboard */,
 				B2E0083627A52C4900FD35BB /* Info.plist */,
+				B2E0085827A52D6D00FD35BB /* NomicsAPICaller.swift */,
+				B2E0085A27A53CBD00FD35BB /* CryptoTableViewCell.swift */,
 			);
 			path = CryptoHelper;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 				B2E0082D27A52C4300FD35BB /* ViewController.swift in Sources */,
 				B2E0082927A52C4300FD35BB /* AppDelegate.swift in Sources */,
 				B2E0082B27A52C4300FD35BB /* SceneDelegate.swift in Sources */,
+				B2E0085B27A53CBD00FD35BB /* CryptoTableViewCell.swift in Sources */,
+				B2E0085927A52D6D00FD35BB /* NomicsAPICaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
