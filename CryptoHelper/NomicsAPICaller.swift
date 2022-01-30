@@ -9,6 +9,7 @@ import Foundation
 
 final class NomicsAPICaller{
     static let shared = NomicsAPICaller()
+    var top10 = [Crypto]()
     
     private struct Constants {
         static let apiKey = "65d826b99ad9177574292332ff03b21ca80d24b6"
@@ -20,9 +21,9 @@ final class NomicsAPICaller{
     }
     
     public func getAllCryptoData(
-        complition: @escaping (Result<[String], Error>) -> Void
+        completion: @escaping (Result<[Crypto], Error>) -> Void
     ){
-        guard let url = URL(string: Constants.assetsEndpoint + "ticker?key" +
+        guard let url = URL(string: Constants.assetsEndpoint + "ticker?key=" +
                             Constants.apiKey + "&ranks=1&interval=1d,30d&convert=USD&per-page=10&page=1") else {
             return
         }
@@ -32,12 +33,14 @@ final class NomicsAPICaller{
             }
             
             do {
-                
+                //Decode
+                let jsonResult = try JSONDecoder().decode([Crypto].self, from: data) ;completion(.success(jsonResult))
             }
             catch {
-                complition(.failure(error))
+                completion(.failure(error))
             }
         }
+        task.resume()
     }
 
 }
