@@ -25,12 +25,7 @@ class CryptoViewController: UIViewController {
         switch result {
         case .success(let models):
             print (models.count)
-            
-
-            print (models[0].name! + " - " + models[0].price!)
-//            print (models[0].name)
-            
-            
+            print (models[0].name + " - " + models[0].price)
             self?.viewModels = models.compactMap({
                 CryptoTableViewCellViewModel(
                     name: $0.name ?? "", symbol: $0.symbol ?? "", price: $0.price ?? "")
@@ -49,7 +44,7 @@ class CryptoViewController: UIViewController {
 
 extension CryptoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +52,7 @@ extension CryptoViewController: UITableViewDelegate, UITableViewDataSource {
         else {
             fatalError()
         }
-        cell.configure(with: viewModels[indexPath.row])
+        cell.configure(with: viewModels[indexPath.row])  // тут поток показывает ошибку
         return cell
     }
 

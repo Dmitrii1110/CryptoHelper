@@ -17,9 +17,9 @@ struct CryptoTableViewCellViewModel {
 
 class CryptoTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var SymbolLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var SymbolLabel: UILabel!
     
     
     static let identifier = "CryptoTableViewCell"
